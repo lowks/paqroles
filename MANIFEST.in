@@ -1,0 +1,1 @@
+recursive-include paqroles *.py *.po .*mo
