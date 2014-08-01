@@ -357,3 +357,18 @@ class TestXxx:
         )
         assert role.allows('blacklist', user={'has_access_to_blacklist': True})
         assert not role.allows('blacklist', user={'has_access_to_blacklist': False})
+
+
+def test_add():
+    role1 = Role('ROLE1', ['x'])
+    role2 = Role('ROLE1', ['y'])
+    role12 = role1 + role2
+    role21 = role2 + role1
+
+    # CHECK IMMUTABILITY
+    assert role1.permissions == ['x']
+    assert role2.permissions == ['y']
+
+    # CHECK LOGIC
+    assert role12.permissions == ['x', 'y']
+    assert role21.permissions == ['y', 'x']
