@@ -1,7 +1,7 @@
 # PaqRoles 
 
-Permission-based role engine
+Permission management library
 
 ## Installation
 
-pip install git+https://github.com/ivan-kleshnin/paqroles
+`$ pip install --upgrade git+https://github.com/ivan-kleshnin/paqroles`
